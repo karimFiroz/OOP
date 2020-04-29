@@ -1,0 +1,37 @@
+
+        <?php
+							/*  echo "<br />"; */
+
+        class Person{     				/*this is class */
+            
+         public $name;  				/*this is property */
+            
+         public $age;					/*this is another property */
+            
+         public function personName(){ 			/*personName is method's name */
+                
+      echo "person name is=" . $this->name;		/*Printing property in method. To calling property this-> is used between $ and name */
+                
+            }						//end of method
+            
+            public function personAge($age){		/* personAge is method's name   */
+
+    echo "person age is=" . $this->age=$age;
+                
+                
+                
+                
+            }						//end of method    
+            
+        }						//end of class
+      
+$personone=new Person;  				/*this is object created out of class */
+
+echo $personone->name='Md. Abdul Karim'; 		/*calling property by object without $ sign. -> is object operator*/
+
+echo "<br />";
+
+$personone->personName();   				/* calling method using object  */
+echo "<br />";
+
+$personone->personAge("56");  				/* calling method using object  */
