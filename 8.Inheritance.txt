@@ -1,0 +1,117 @@
+   
+<?php class P 
+    {
+     public $n=12;
+    
+    } 
+
+
+
+      class C extends P
+       {
+           function display() 
+           {
+                echo $this->n; 
+
+            } 
+
+        } 
+
+ $io=new C(); 
+$io->display(); ?>
+
+
+
+
+----------------------------------------------------
+   <?php
+    class UserData
+    {
+            public $user;
+            public $userId;
+
+
+            public function __construct($userName,$userId)
+            {
+                 $this->user=$userName;
+                $this->userId=$userId;
+            }
+
+
+
+            public function display()
+            {
+           echo "username is= {$this->user} and userid is={$this->userId}";
+            }
+        
+    } 
+
+class Admin extends UserData{
+    
+}
+
+
+
+
+$user="Karim";
+$id="3";
+$add=new Admin($user,$id);
+$add->display();
+?>
+
+
+
+-----------------------------------------------------------
+
+
+
+<?php
+
+
+    class UserData
+    {
+            public $user;
+            public $userId;
+
+
+            public function __construct($userName,$userId)
+            {
+                 $this->user=$userName;
+                $this->userId=$userId;
+            }
+
+
+
+            public function display()
+            {
+           echo "username is= {$this->user} and userid is={$this->userId}";
+            }
+        
+    } 
+
+
+
+
+
+        
+    class Admin extends UserData
+    {
+       public $level; 
+             public function display()
+            {
+           echo "username is= {$this->user} and userid is={$this->userId} and level is {$this->level}";
+            }
+    }   
+ 
+$user="karim";
+$id="25";
+$ur=new UserData($user,$id);
+$ur->display();
+
+echo "<br />";
+
+$user="Rahim";
+$id="5";
+$add=new Admin($user,$id);
+$add->level="Administrator";
+$add->display();

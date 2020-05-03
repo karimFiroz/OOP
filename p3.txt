@@ -1,0 +1,27 @@
+<?php 
+class university 
+{ 
+  function Room() 
+   { 
+  echo "This is class room";
+     
+      } //End method 
+
+ } //end of class
+
+      $obj = new university(); 
+      
+      echo $obj->Room();
+      ?>
+
+----------------------------------
+
+<?php 
+class university { 
+  function course()  { 
+     echo "Software Engineering "; 
+    } //End method 
+  }//end of class
+
+$obj = new university();
+$obj->course();

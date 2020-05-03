@@ -1,0 +1,15 @@
+      <?php
+        class UserData{
+    
+            public static $age="30"; //static property
+            
+    
+        
+    public static function display(){   //static method
+   
+        echo "Age is:". self::$age; // scope resulation operator ::
+    }
+        
+        }
+
+UserData::display(); //without creating objet

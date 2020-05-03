@@ -1,0 +1,190 @@
+<?php
+/* public property access permission every where */
+
+
+     class UserData  
+    {
+            public $user;   
+            /* Here public is an Access modifiere which permition access everywhere*/
+            public $userId;
+            public $age;
+
+
+            public function __construct($userName,$age)
+            {
+                 $this->user=$userName;
+               // $this->userId=$userId;
+                $this->age=$age;
+
+            }
+
+
+
+            public  function display()     
+            {
+           echo "username is= {$this->user} and userid is={$this->userId}";
+           echo "<br />";
+           echo "Your age is {$this->age}"." ". "inside class";
+            }
+        
+    } 
+
+
+
+
+
+        
+    class Admin extends UserData
+    {
+       public $level; 
+             public function display()
+            {
+           echo "username is= {$this->user} and userid is={$this->userId} and level is {$this->level}";
+           echo "<br />";
+           echo "Your age is {$this->age}"." ". "inside child class";
+            }
+    }   
+ 
+$user="karim";
+$id="2";
+$age="55";
+$ur=new UserData($user,$age);
+$ur->display();
+
+echo "<br />";
+
+$user="Rahim";
+$id="5";
+$add=new Admin($user,$age);
+$add->level="Administrator";
+$add->display();
+?>
+-----------------------------------------------------
+<?php
+
+/* private property access permission only in  class but forbid its child class and outside of class */
+
+     class UserData  
+    {
+            public $user;   
+            /* Here public is an Access modifiere which permition access everywhere*/
+            public $userId;
+            private $age;       //private property
+
+
+            public function __construct($userName,$age)
+            {
+                 $this->user=$userName;
+               // $this->userId=$userId;
+                $this->age=$age;
+
+            }
+
+
+
+            public  function display()     
+            {
+           echo "username is= {$this->user} and userid is={$this->userId}";
+           echo "<br />";
+           echo "Your age is {$this->age}"." ". "access inside of class";
+            }
+        
+    } 
+
+
+
+
+
+        
+    class Admin extends UserData
+    {
+       public $level; 
+             public function display()
+            {
+           echo "username is= {$this->user} and userid is={$this->userId} and level is {$this->level}";
+           echo "<br />";
+           echo "Your age is {$this->age}"." ". "Could not access inside from child class";
+            }
+    }   
+ 
+$user="karim";
+$id="2";
+$age="58";
+$ur=new UserData($user,$age);
+$ur->display();
+
+echo "<br />";
+
+$user="Rahim";
+$id="8";
+$add=new Admin($user,$age);
+$add->level="Administrator";
+$add->display();
+?>
+
+------------------------------------------------------------
+<?php
+
+/* protected property access permission in its class and child class but forbid out of class */
+
+     class UserData  
+    {
+            public $user;   
+            /* Here public is an Access modifiere which permition access everywhere*/
+            public $userId;
+            protected $age;       //protected property
+
+
+            public function __construct($userName,$age)
+            {
+                 $this->user=$userName;
+               // $this->userId=$userId;
+                $this->age=$age;
+
+            }
+
+
+
+            public  function display()     
+            {
+           echo "username is= {$this->user} and userid is={$this->userId}";
+           echo "<br />";
+           echo "Your age is {$this->age}"." ". "access inside of class";
+            }
+        
+    } //edn of class
+
+
+
+
+
+        
+    class Admin extends UserData
+    {
+       public $level; 
+             public function display()
+            {
+           echo "username is= {$this->user} and userid is={$this->userId} and level is {$this->level}";
+           echo "<br />";
+           echo "Your age is {$this->age}"." ". " access  from child class";
+            }
+    }   //end of child class
+ 
+$user="karim";
+$id="2";
+$age="58";
+$ur=new UserData($user,$age);
+$ur->display();
+
+echo "<br />";
+
+
+$user="Rahim";
+$id="8";
+$add=new Admin($user,$age);
+$add->level="Administrator";
+$add->display();
+
+echo "<br />";
+echo $ur->age; /* protected property could not access outside of class */
+?>

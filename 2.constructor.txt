@@ -1,0 +1,97 @@
+<?php 
+class human { 
+   function __construct() {
+      echo "This is Bangladesh";
+       
+      } 
+    } 
+       $akash = new human(); 
+      
+       ?>
+--------------------------------------
+Return value using constructor
+-------------------------------------
+<?php 
+class human {  
+    public $p; 
+    function __construct() { 
+      $p=15; 
+      echo $p;
+     }
+} 
+$akash = new human();
+
+ ?>
+----------------------------------------
+constructor receive fixed value and print
+---------------------------------------
+<?php class human {
+   // this is starting bracket 1 for this class 
+   function __construct($name) { 
+     echo $name;
+  
+} 
+} 
+$akash = new human('Jebin');
+
+?>
+
+
+-----------------------------------------
+constructor receive two fixed value and print
+---------------------------------------
+<?php 
+class human { 
+   
+  function __construct($name, $age) { 
+    echo $name; 
+    echo "<br />";
+    echo $age; 
+  } 
+  }
+  $akash = new human('Jebin', 21);
+
+  ?>
+
+------------------------------------------------
+
+<?php 
+class human { 
+   
+  function __construct($name, $age) { 
+    echo $name; 
+    echo "<br />";
+    echo $age; 
+  } 
+  }
+  $a="Jebin";
+  $b="21";
+  $akash = new human($a,$b);
+
+  ?>
+----------------------------------------------------
+
+
+
+ <?php
+        class Person{
+        public $name;
+        public $age;
+        public function __construct($name,$age){
+           echo "constructor created.<br />"; 
+            $this->name = $name; 
+            $this->age = $age;
+        }
+        public function PersonDetails(){
+            echo "Person Name is {$this->name} and Person age is {$this->age}";
+            
+            
+            
+        }
+        
+    
+        
+        }
+        $personOne=new Person("Karim","55");
+        
+        $personOne->PersonDetails();

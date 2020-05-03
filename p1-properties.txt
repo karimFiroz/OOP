@@ -1,0 +1,34 @@
+<?php
+
+class Bangladesh{
+  //creating a class mamed Bangladesh
+
+  public $city="Dhaka";
+}//end of class
+
+$obj=new Bangladesh;//creating object of class
+echo $obj->city;
+?>
+----------------------------------------------
+<?php
+
+class Man{
+  
+
+  public $name="Karim";
+}//end of class
+
+$obj=new Man;//creating object of class
+echo $obj->name;
+?>
+----------------------------------------------
+<?php
+
+class MyClass{
+  
+
+  public $pop="I'm property";
+}//end of class
+
+$obj=new MyClass;//creating object of class
+echo $obj->pop;

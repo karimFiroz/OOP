@@ -1,0 +1,24 @@
+   <?php
+        class userData{
+        public $user;
+        public $userId;
+            
+        public function __construct($userName,$userId){
+             $this->user=$userName;
+            $this->userId=$userId;
+            
+            echo "username is= {$this->user} and userid is={$this->userId}";
+       
+        }
+        public function __destruct(){
+           unset( $this->user);
+            unset($this->userId);
+        }
+        
+    
+        
+        }
+
+$user="karim";
+$id="25";
+$ur=new userData($user,$id);

@@ -1,0 +1,45 @@
+<?php class pen {
+   function PenType($price) //$price is parameter
+     {
+        echo $price; 
+        
+        }//end of method 
+        } //end of class
+        $obj =new pen(); 
+        $obj->PenType(2); //2 is value 
+        ?>
+--------------------------------------
+Double parameter and double value
+------------------------------------
+<?php 
+class pen {
+ function PenType($price, $penName){ 
+//Double parameter  
+   echo $price;
+    echo "<br />";
+    echo $penName;
+     } 
+     }
+      $obj =new pen();
+       $obj->PenType(13, "Econo"); 
+//Double value using comma 
+       ?>
+
+-----------------------------------------
+Triple parameter and triple value
+-----------------------------------------
+<?php 
+class pen { 
+  function PenType($price, $penName, $companyName){  
+    // triple parameter
+    echo $price;
+    echo "<br />"; 
+    echo $penName;
+    echo "<br />"; 
+    echo $companyName; 
+  } //end of method
+}//end of class 
+  $obj =new pen();//creating object
+   $obj->PenType(13, "Econo", "Ocan");
+   //triple value
+  ?>

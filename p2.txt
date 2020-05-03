@@ -1,0 +1,56 @@
+ p1.php
+------------
+<?php 
+class MyClass { 
+  public $pop = "I'm a class property!";
+ } 
+
+
+ class human {
+      public $gender='Male'; 
+      } 
+
+
+
+      class Kool { 
+
+         public $mvar = 'aMemberVar Member Variable'; 
+         public $aFuncName = 'Function of member'; 
+
+         function mfunc() { 
+            print 'Mfunc is the insde of kool class'; 
+         }//end of method
+}//end of class
+      
+   
+
+class university  {
+   function Room()  {
+    echo "This is class room";
+   } //End method
+ }//end of class
+?>
+index.php
+--------------------
+<?php  
+ include('p1.php');
+
+ 
+ $obj = new MyClass; 
+ echo $obj->pop; 
+
+
+ echo "<br />";
+ $manik = new human(); 
+ echo $manik->gender; 
+ 
+
+
+ echo "<br />";
+ $kk = new kool; 
+ echo $kk->mfunc();
+
+ echo "<br />";
+ $obj = new university(); 
+ echo $obj->Room(); 
+?>

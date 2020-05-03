@@ -1,0 +1,20 @@
+   <?php
+        class userData{
+       
+        const NAME="Md. Abul Qasem";
+            
+    
+        
+            public function display(){
+              echo "Full name is=".userData:: NAME;
+                
+            }
+            
+         
+        
+        }
+
+$ur=new userData;
+
+$ur->display();
+

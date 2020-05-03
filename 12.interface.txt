@@ -1,0 +1,191 @@
+<?php
+
+/*
+parent class ---> extends
+interface ---->impliments
+*/
+
+ interface tem{    //like parent class
+        public function f1(); 
+          } 
+
+class test implements tem{ //like extends
+
+public function f1() { 
+   echo "Hello"; 
+ } 
+ } 
+ $h =new test(); 
+ $h->f1(); 
+ 
+ ?>
+
+------------------------------------------------------------
+
+<?php
+
+/*
+parent class ---> extends
+interface ---->impliments
+*/
+
+ interface School{ //like create parent class
+        public function mySchool(); 
+        //create an empty method.it has no body part
+
+          } 
+
+
+
+          interface College{ //like create parent class
+                public function myCollege(); 
+                //create an empty method.it has no body part
+        
+                  } 
+
+
+                  interface University{ //like create parent class
+                        public function myUniversity(); 
+                        //create an empty method.it has no body part
+                
+                          } 
+
+class Teacher implements School, College, University{ 
+
+        public function __construct(){
+                $this->mySchool();
+                $this->myCollege();
+                $this->myUniversity();
+        }
+
+
+
+public function mySchool() {  
+/* after implements these method has body part and over write! */
+   echo "I'm a school teacher.<br />"; 
+ }
+
+ public function myCollege() {  
+        /* after implements these method has body part and over write! */
+           echo "I'm a college teacher.<br />"; 
+         } 
+
+         public function myUniversity() {  
+                /* after implements these method has body part and over write! */
+                   echo "I'm a university teacher."; 
+                 } 
+
+
+
+
+
+                }
+
+
+ $teacher =new Teacher();
+  
+
+ /* $teacher->mySchool();  create constructor for autoload */
+ 
+ ?>
+------------------------------------------------------------------
+
+
+<?php
+
+/*
+parent class ---> extends
+interface ---->impliments
+*/
+
+ interface School{ //like create parent class
+        public function mySchool(); 
+        //create an empty method.it has no body part
+
+          } 
+
+
+
+          interface College{ //like create parent class
+                public function myCollege(); 
+                //create an empty method.it has no body part
+        
+                  } 
+
+
+                  interface University{ //like create parent class
+                        public function myUniversity(); 
+                        //create an empty method.it has no body part
+                
+                          } 
+
+class Teacher implements School, College, University{ 
+
+        public function __construct(){
+                $this->mySchool();
+                $this->myCollege();
+                $this->myUniversity();
+        }
+
+
+
+public function mySchool() {  
+/* after implements these method has body part and over write! */
+   echo "I'm a school teacher.<br />"; 
+ }
+
+ public function myCollege() {  
+        /* after implements these method has body part and over write! */
+           echo "I'm a college teacher.<br />"; 
+         } 
+
+         public function myUniversity() {  
+                /* after implements these method has body part and over write! */
+                   echo "I'm a university teacher.<br />"; 
+                 } 
+
+
+
+
+
+}
+
+
+
+
+                class Student implements School, College, University{ 
+
+                        public function __construct(){
+                                $this->mySchool();
+                                $this->myCollege();
+                                $this->myUniversity();
+                        }
+                
+                
+                
+                public function mySchool() {  
+                /* after implements these method has body part and over write! */
+                   echo "I'm a school student.<br />"; 
+                 }
+                
+                 public function myCollege() {  
+                        /* after implements these method has body part and over write! */
+                           echo "I'm a college student.<br />"; 
+                         } 
+                
+                         public function myUniversity() {  
+                                /* after implements these method has body part and over write! */
+                                   echo "I'm a university student."; 
+                                 } 
+                         
+        }
+
+
+
+ $teacher =new Teacher();
+ $student=new Student();
+  
+
+ /* $teacher->mySchool();  create constructor for autoload */
+ 
+ ?>

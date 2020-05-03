@@ -1,0 +1,86 @@
+<?php 
+class A{
+         // parent class 
+         function Dp(){ 
+                 // parent method 
+                 
+                 echo "I'm in parent class A method Dp<br/>"; 
+                 }
+                
+                } 
+
+
+class B extends A{
+         // B is child class of A
+ function Dp(){
+        // child method  
+        echo "I'm in child B method Dp<br/>"; 
+        }
+        } 
+
+
+        // THis Dp method in both chlid and parent class this way is polymorphism 
+class C extends A {
+
+ function Dp() { 
+ echo " I am in Class C method Dp"; 
+        } 
+}
+$parent=new A();
+$parent->Dp();
+$obj=new B(); 
+$obj->Dp();
+$oc= new C();
+$oc->Dp();
+ ?>
+
+---------------------------------------------------------------
+<?php
+        class userData{
+        public $user;
+        public $userId;
+            
+        public function __construct($userName,$userId){
+             $this->user=$userName;
+            $this->userId=$userId;
+            
+           
+       
+        }
+        public function display(){
+        
+echo "username is= {$this->user} and userid is={$this->userId}";
+
+        }//child inside parent class
+        
+    
+        
+        }//end of parent class
+
+
+        class Admin extends userData{
+
+                public $level="Administrator";
+
+                public function display(){
+        
+echo "username is= {$this->user} and userid is={$this->userId}and userlevel is{$this->level}";
+                    }
+        }//out of parent class
+
+$user="karim";
+$id="01";
+$ur=new userData($user,$id);
+$ur->display();
+
+echo "<br />";
+
+$admin=new Admin("Rahim","02");
+$admin->display();
+/* display method used diffirent places this is polymorphism ! */
+
+echo "<br />";
+
+if($admin instanceof userData){
+echo "inherited";
+}

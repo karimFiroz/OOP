@@ -1,0 +1,49 @@
+<?php 
+class university 
+{ 
+  function Room() 
+   { 
+  echo "This is class room";
+     
+      } //End method 
+
+ } //end of class
+
+      $obj = new university(); 
+      
+      echo $obj->Room();
+      ?>
+
+
+----------------------------------
+print property value using method
+-----------------------------------
+<?php 
+class university {
+   public $name = 'John';
+     
+    function getName() {
+        
+       echo $this->name; 
+       } 
+       } $obj =new university(); 
+       $obj->getName(); 
+       
+       ?>
+
+---------------------------------------
+
+<?php 
+class university {
+   public $name = 'Mohsin';
+     
+    function getName()
+    {
+      $this->name; 
+      echo $this->name;  
+    }
+  }
+       
+       $obj =new university(); 
+       $obj->getName();
+       ?>

@@ -1,0 +1,59 @@
+<?php 
+class X 
+    {
+        public function __construct()  
+        { 
+            echo 'building an object<br />'; 
+        } 
+            
+            public function __destruct() 
+            { 
+                echo 'destroying the object'; 
+            } 
+
+    }
+
+
+$obj = new X();
+
+?>
+
+
+
+
+
+
+
+
+----------------------------------------------------------
+ <?php
+        class Person{
+        public $name;
+        public $age;
+        public $id;
+            
+            public function __construct($name,$age){
+               echo "constructor created.<br />"; 
+                $this->name = $name; 
+                $this->age = $age;  
+            }
+            
+   public function setId($id){
+       $this->id=$id;  
+   }
+            
+            public function __destruct(){
+                if(! empty($this->id)){
+                    echo "Saveing Person";
+                    //mysql close();
+                }
+                
+            }
+        
+            
+            
+        }
+        $personOne=new Person("Karim","55");
+        
+        $personOne->setId(12);
+        unset($personOne);

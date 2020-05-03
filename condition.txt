@@ -1,0 +1,44 @@
+public class BioData {
+   public static void main(String[]args){ //main method
+  /*****File name and class name should be same*******/
+  int age;
+  Scanner sc=new Scanner(System.in);
+   System.out .print("Your age=");
+  age=sc.nextInt();
+  if(age>=18){
+      
+   System.out.println("You are adault");
+  }else{
+  System.out.println("You are child.");
+  }
+}
+}
+-----------------------------------------------
+  //variable
+  float a=30.0F;
+  int b=7
+  System.out.println(a+b);
+  System.out.println(a-b);
+  System.out.println(a*b);
+  System.out.println(a/b);
+  System.out.println(a%b);
+ }
+}
+-------------------------------
+  //variable
+  int abul=20;
+  int babul=12;
+ if(abul>babul){
+ System.out.println("abul is elder");
+ }else{
+  System.out.println("abul is abul is younger");
+ }
+----------------------------------------
+  //variable
+  int abul=20;
+  int babul=12;
+ if(abul>babul){
+ System.out.println("abul is elder");
+ }else{
+  System.out.println("abul is abul is younger");
+ }

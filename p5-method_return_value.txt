@@ -1,0 +1,51 @@
+-------------------------------
+Method return integer value
+----------------------------------
+<?php 
+class pen { 
+  function PenType() { 
+    return 5;
+  } //end of method
+} //end of class
+$obj =new pen(); 
+echo $obj->PenType(); 
+  ?>
+-----------------------------------
+Method return float value
+----------------------------------
+<?php 
+class pen { 
+  function PenType() {
+     return 45.23; 
+     
+     } //end of method
+} //end of class
+     $obj =new pen(); 
+     echo $obj->PenType();
+     ?>
+------------------------------------
+Method return string value
+----------------------------------
+<?php class pen { 
+  function PenType() {
+     return "Econo";
+}
+     } 
+     $obj =new pen(); 
+     echo $obj->PenType();
+     ?>
+
+----------------------------------------------
+Method return(variable) property value using this keyword
+------------------------------------------------
+<?php 
+class pen {
+  public $price=50; 
+  function PenType() { 
+    return $this->price;
+    //return property value using method
+    } 
+  } 
+    $obj =new pen(); 
+    echo $obj->PenType();
+    ?>
