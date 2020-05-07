@@ -1,10 +1,36 @@
+
+---------------------------------------------------------------
+<?php class A{
+   // parent class 
+   function Display(){ 
+     echo "Inside the Base class<br/>"; 
+    }
+  } 
+    
+    
+    class B extends A{ 
+      // B is child class 
+      function Display(){
+        
+        echo "Inside the Chlid class<br/>"; 
+      }} 
+      // THis Display method in both chlid and parent class this way is polymorphism
+
+      $sup=new A(); 
+      $sup->Display(); 
+
+$obj=new B(); 
+$obj->Display(); 
+?>
+
+---------------------------------------------------------------
 <?php 
 class A{
          // parent class 
-         function Dp(){ 
+         function Display(){ 
                  // parent method 
                  
-                 echo "I'm in parent class A method Dp<br/>"; 
+                 echo "I'm in parent class A calling method Display<br/>"; 
                  }
                 
                 } 
@@ -12,29 +38,30 @@ class A{
 
 class B extends A{
          // B is child class of A
- function Dp(){
+ function Display(){
         // child method  
-        echo "I'm in child B method Dp<br/>"; 
+        echo "I'm in child B calling method Display<br/>"; 
         }
         } 
 
 
-        // THis Dp method in both chlid and parent class this way is polymorphism 
+        // THis Display method in both chlid and parent class this way is polymorphism 
 class C extends A {
 
- function Dp() { 
- echo " I am in Class C method Dp"; 
+ function Display() { 
+ echo " I am in Class C calling method Display"; 
         } 
 }
 $parent=new A();
-$parent->Dp();
-$obj=new B(); 
-$obj->Dp();
-$oc= new C();
-$oc->Dp();
- ?>
+$parent->Display();
 
----------------------------------------------------------------
+$obj=new B(); 
+$obj->Display();
+
+$oc= new C();
+$oc->Display();
+ ?>
+------------------------------------------------------------
 <?php
         class userData{
         public $user;

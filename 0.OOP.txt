@@ -1,0 +1,149 @@
+<?php
+class color{
+function green() {
+echo "This is Green Color";
+}
+function red() {
+echo "This is Red Color";
+}
+function blue() {
+echo "This is Blue Color";
+}
+}
+$dark = new color;
+$dark->red(); // here we call red method using dark object
+?>
+-------------------------------
+<?php
+class color{
+function green() {
+echo "This is Green Color";
+}
+function red() {
+echo "This is Red Color";
+}
+function blue() {
+echo "This is Blue Color";
+}
+}
+$dark = new color;
+$dark->red(); // here we call red method using dark object
+$dark->green(); // call green method using dark it can be new or different
+?>
+
+
+-------------------------------
+
+<?php
+class pen {
+public $price=50;
+function PenType() {
+return $this->price;
+ // return string type value like Econo
+}
+}
+$obj =new pen();
+echo $obj->PenType(); 
+// Here we will get Econo
+?>
+
+------------------------------------
+
+<?php
+class pen {
+function PenType() {
+return "Econo";
+ // return string type value like Econo
+}
+}
+$obj =new pen();
+echo $obj->PenType(); 
+// Here we will get Econo
+?>
+-------------------------------------------
+
+<?php
+class pen {
+function PenType() {
+return 5; // return value 5 // use return keyword to reutrn vlaue
+}
+}
+$obj =new pen();
+echo $obj->PenType(); // Here we will get 5 becuase call PenType from here
+?>
+----------------------------------------------
+
+<?php
+class p{
+public $d=10;
+
+public $e="Bookbd for Bangla Book";
+}
+$g = new p;
+var_dump($g);
+echo "<br />";
+echo $g->d;
+echo "<br />";
+echo $g->e;
+?>
+-----------------------------
+<?php
+class p{
+function pen($n, $r){ 
+echo $n;
+echo $r;
+}
+}
+$g = new p;
+$g->pen("echo no", 15); 
+?>
+-----------------------------
+<?php
+class p{
+function pen($n,$customer){ 
+echo $n;
+echo "<br />";
+echo $customer;
+}
+}
+$g = new p;
+$g->pen("echo no","Kamal"); 
+?>
+------------------------------------
+<?php
+class pen {
+function PenType($price){ // $price is parameter its vlaue come when call it
+echo $price; // display the value of $price
+}
+}
+$obj =new pen();
+$obj->PenType(2); // passing value of $price, value is 2
+?>
+-------------------------------------
+<?php
+class pen {
+function PenType($price, $penName, $companyName){ // if more than one parameter write using comma
+echo $price; // display the value of $price
+echo "<br />";
+echo $penName;
+echo "<br />";
+echo $companyName;
+}
+}
+$obj =new pen();
+$obj->PenType(13, "Econo", "Ocan"); // if want to pass more paramter value write using comma
+?>
+
+
+--------------------------------------
+<?php
+class pen {
+function PenType($price, $penName){ // if more than one parameter write using comma
+echo $price; // display the value of $price
+echo "<br />";
+echo $penName;
+}
+}
+$obj =new pen();
+$obj->PenType(13, "Econo"); // if want to pass more paramter value write using comma
+?>

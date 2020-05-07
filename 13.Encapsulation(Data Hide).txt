@@ -1,0 +1,118 @@
+<?php 
+class enc { 
+  private $p=10; 
+  
+  function mn() { 
+    return $this->p; 
+     
+  }
+  
+}
+
+$obj=new enc(); 
+
+echo $obj->mn();
+ // if we call mn method we get p
+
+echo $obj->p; 
+//it will not work because p is private 
+ 
+ ?>
+-----------------------------------------
+<?php 
+class enc { 
+  protected $p=10; 
+  
+  function mn() { 
+    return $this->p; 
+     
+  }
+  
+}
+
+$obj=new enc(); 
+
+echo $obj->mn();
+ // if we call mn method we get p
+
+echo $obj->p; 
+//it will not work because p is protected 
+ 
+ ?>
+---------------------------------------------
+<?php 
+class Hide { 
+  private $myname; 
+
+  function getname() { 
+
+    $this->myname = "Karim<br>"; 
+    return $this->myname; 
+
+  } 
+} 
+
+  class mimi { 
+
+    private $name='Rahim<br>'; 
+
+    public function sname() { 
+      echo "I am in hide class<br> "; 
+      return $this->name; 
+    }
+   }
+
+  
+
+$run = new mimi();
+
+echo $run->sname(); 
+
+$ho= new Hide(); 
+echo $ho->getname(); 
+
+?>
+---------------------------------------
+<?php 
+abstract class Foo { 
+  // Foo is abstract class 
+  abstract public function foobar(); //it has no body part
+  // foobar is abstract method no body of this method 
+}
+
+class Baz extends Foo {
+
+public function foobar() { 
+  // implement the foobar method in the Baz class 
+  echo "My name is Karim"; 
+  // only child class can implement the abstract method 
+  } } 
+  /* we cant create the object of Foo class like 
+  $ob=new Foo(), not possible because abstract class */
+  
+  $h=new Baz(); 
+  $h->foobar(); 
+  ?>
+--------------------------------------------------
+<?php 
+abstract class A{ 
+  abstract function disp(); //it has no body
+} 
+
+class B extends A{
+  public function disp(){ 
+    echo "Inside the child class B<br/>"; 
+  } } 
+  
+  class C extends A{ 
+    public function disp(){ 
+      echo "Inside the child class C<br/>";
+    } } 
+    
+    $two=new B();
+echo "<b>Calling from the child class B:</b><br/>";
+$two->disp(); 
+echo "<b>Calling from the child class C:</b><br/>"; 
+$three=new C(); 
+$three->disp(); 
+?>

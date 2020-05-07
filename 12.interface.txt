@@ -1,3 +1,133 @@
+
+<?php 
+class P { 
+  public $n=12; 
+  // n declared in p class and assign value 12 
+  } 
+  class C extends P { 
+    function display() { 
+      echo $this->n; 
+      // print n in the c lass but c is varible in p class 
+      // since c is the child of p for that reason n is printed in the display method 
+      } } 
+      $io=new C(); 
+      $io->display(); //son can use parent's property
+      ?>
+--------------------------------------------------
+<?php 
+/*
+parent class ---> extends
+interface ---->impliments
+*/
+interface tem { 
+  public function f1(); //it has no body
+  } 
+  class test implements tem { 
+    public function f1() { 
+      echo "Hello"; 
+      } 
+    } 
+      $h =new test(); 
+      $h->f1(); 
+      ?>
+----------------------------------------------
+
+<?php 
+/*
+parent class ---> extends
+interface ---->impliments
+*/
+interface Sort { 
+
+  function getContent(); //it has no body
+}
+
+class Doc implements Sort {
+
+  public function getContent() { 
+    return "This is Text of the Document\n";
+     } 
+
+    } 
+    
+     $p = new Doc(); 
+     echo $p->getContent(); 
+     ?>
+-------------------------------------------------
+<?php 
+interface employee { 
+
+  function setdata($empname,$empage);//it has no body
+
+function outputData();//it has no boky
+
+} 
+class Payment implements employee { 
+
+  function setdata($empname,$empage) {//empty body 
+   
+    } 
+    
+    function outputData() { 
+      echo "Inside Payment Class"; 
+      }
+     } 
+
+      $p = new Payment(); 
+      $p->outputData(); 
+      ?>
+----------------------------------------------
+
+<?php 
+class class_A { 
+
+  public function hello() { 
+
+    return "Hello I am parent"; 
+    
+    }
+   } 
+
+    class my_class extends class_A { 
+
+      public function greeting() { 
+
+        echo $this->hello(); 
+        //calling hello method using child class out of parent class
+        
+        } } 
+
+
+        $obj = new my_class; 
+        // object of base class my_class 
+        echo $obj->greeting(); child can use parent's method
+        // call greeting method of base class 
+        ?>
+------------------------------------------------
+<?php 
+class class_A{ //super class
+  public function hello($name) //super method
+  { 
+    return $name; 
+    // hello method return Isita 
+    //parent can use child's value
+  } 
+} 
+  
+  class my_class extends class_A { //create child class
+    public function greeting($name) { //child method
+      echo $this->hello($name); //calling supper method
+      // call hello mehtod of Class_A 
+    } 
+  }
+$obj = new my_class; //create child class object
+// object of base class my_class
+
+echo $obj->greeting('Isita'); //submit value in child method
+// call greeting method of base class 
+?>
+
+---------------------------------------
 <?php
 
 /*
@@ -19,6 +149,67 @@ public function f1() {
  $h->f1(); 
  
  ?>
+--------------------------------------------------------
+<h3>page40</h3>
+
+<?php 
+class kok { //super class
+
+  public $name; 
+
+  function Pet($name) { //super method-1
+    echo $this->name=$name."<br>"; //calling srper property
+  } 
+
+
+  
+  function eat() { //another  supper method-2
+echo "I'm eating<br>";
+  } 
+  
+  function sleep() { //another supper method-3
+    echo 'I am sleeping<br>';
+  }
+ } 
+
+
+
+
+  class Dog extends kok { //creating child class-1 
+    function bark() { // child method-1
+echo "I'm barking<br>";
+    } 
+  } 
+ 
+    class Cat extends kok { //creating child class-2
+      function meow() { // child method-2
+echo "I'm meowing<br>";
+      } 
+
+    } 
+
+    
+
+    $sup=new kok;
+    $sup->Pet("Tom");
+
+
+      $dog = new Dog("Max"); 
+
+      //creating child object-1 and input value
+      $dog->eat(); //calling empty supper method-2
+      $dog->bark(); //calling empty child method-1
+      $dog->sleep();
+      //calling super method-3 from child object-1
+
+$cat = new Cat("Misty"); 
+
+ //creating child object-2 and input value
+$cat->eat();  //calling empty supper method-2
+$cat->meow(); //calling empty child method-2
+$cat->sleep(); //calling super method-3
+
+?>
 
 ------------------------------------------------------------
 

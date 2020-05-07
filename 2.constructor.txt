@@ -9,6 +9,31 @@ class human {
       
        ?>
 --------------------------------------
+<?php 
+class Foo {
+
+   public $Bar; 
+
+   public function __construct() { 
+     echo $this->Bar = 5; //display without call
+    echo "<br />";
+     } 
+
+
+     public function Baz() { 
+       $this->Bar = 10; //must be call
+       echo $this->Bar; 
+       }
+
+       } 
+
+
+       $f1 = new Foo(); 
+        
+       $f1->Baz();//calling method
+      
+         ?>
+--------------------------------------
 Return value using constructor
 -------------------------------------
 <?php 

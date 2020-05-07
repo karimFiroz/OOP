@@ -1,3 +1,177 @@
+<?php 
+class test { 
+  public $abc='I am defined public';
+   // abc variblae defined by public 
+  } 
+  $objA = new test(); 
+  echo $objA->abc;
+  //accessible from outside because abc defined by public 
+  ?>
+---------------------------------------------------------------
+<?php 
+class test { 
+  public $abc='you can access me (abc) outside of test class <br>'; 
+  public $xyz;
+  public function xyz() { 
+    echo 'you can access me (zyz) outside of test class '; 
+    } } 
+    $objA = new test();
+    echo $objA->abc; 
+    echo $objA->xyz();//accessible from outside $objA->xyz();//public method of the class test 
+    ?>
+---------------------------------------------------------------
+<?php 
+class test { 
+  private $abc='you can access me (abc) inside of of test class '; 
+  public function xyz() { 
+    echo $this->abc; 
+    }
+   } 
+    $objA = new test(); 
+     
+    $objA->xyz(); 
+    ?>
+
+<?php 
+class test { 
+  private $abc='you can access me (abc) inside of of test class '; 
+  public function xyz() { 
+    echo $this->abc; 
+    }
+   } 
+    $objA = new test(); 
+    echo $objA->abc;
+    ?>
+-------------------------------------------------------
+<?php 
+class Myclass { 
+  public $title; 
+  public function DispTitle() { 
+    echo $this -> title; 
+    echo "<br />"; 
+  } } 
+  $obj = new Myclass(); 
+  $obj->title = "ABCXYZ"; //submit property value
+  echo $obj->title; //call property
+  echo "<br />"; 
+  echo $obj->DispTitle();//call using method
+?>
+------------------------------------------------------
+private properyt call using constructor
+----------------------------------------------
+<?php 
+class Myclass { 
+  protected $title=10; 
+  } 
+  
+  class Baseclass extends Myclass { 
+
+    function __construct() { 
+      echo $this->title; 
+      } 
+      } 
+      $obj = new Baseclass(); 
+      ?>
+-----------------------------------------------
+<?php 
+class Car { 
+  private $NumberOfDoors; 
+  public function __construct() { 
+    $this->NumberOfDoors = 4; 
+    echo $this->NumberOfDoors; 
+    } } // instantiate 
+    $car= new Car(); 
+    // show the property - not allowed 
+    ?>
+----------------------------------------------
+protected property call creating child class
+-------------------------------------------
+<?php 
+class pc { 
+  protected $pr=451; 
+ 
+  } 
+  class cc extends pc { 
+
+    public function testChild() {
+      $this->pr; 
+      echo $this->pr; 
+      //will work because it cc is child of pc 
+      } } 
+      $objChild = new cc(); 
+      $objChild->testChild();
+      //work because test child will call 
+      ?>
+----------------------------------------------------
+<?php 
+class myClass { 
+
+  public $public = 'Public'; 
+  protected $protected = 'Protected'; 
+  private $private = 'Private'; 
+
+  function printHello() { 
+
+    echo $this->public; 
+    echo $this->protected; 
+    echo $this->private; 
+  } 
+} 
+
+
+  $obj = new myClass(); 
+  echo $obj->public; // Works 
+  echo $obj->protected; // Fatal Error 
+  echo $obj->private; // Fatal Error
+$obj->printHello();
+------------------------------------------------
+<?php 
+class myClass { 
+
+  public $public = 'Public'; 
+  protected $protected = 'Protected'; 
+  private $private = 'Private'; 
+
+  function printHello() { 
+
+    echo $this->public; 
+    echo $this->protected; 
+    echo $this->private; 
+  } 
+} 
+
+
+  $obj = new myClass(); 
+  echo $obj->public; // Works 
+  echo $obj->protected; // Fatal Error 
+  echo $obj->private; // Fatal Error
+$obj->printHello();
+
+
+class myClass2 extends myClass { 
+ 
+  protected $protected = 'Protected2'; 
+
+  function printHello() { 
+
+    echo $this->public; 
+    echo $this->protected; 
+    echo $this->private; 
+
+    } } 
+
+
+    $obj2 = new myClass2(); 
+
+    echo $obj->public;  // Works 
+    echo $obj2->private; // Undefined 
+    echo $obj2->protected; // Fatal Error 
+    // Shows Public, Protected2, not Private 
+    $obj2->printHello();
+    
+     ?>
+--------------------------------------------
+
 <?php
 /* public property access permission every where */
 

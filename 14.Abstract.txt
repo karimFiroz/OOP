@@ -1,0 +1,24 @@
+<?php 
+abstract class A{ 
+  abstract function disp(); //it has no body
+} 
+
+class B extends A{
+  public function disp(){ 
+    echo "Inside the child class B<br/>"; 
+  } } 
+  
+  class C extends A{ 
+    public function disp(){ 
+      echo "Inside the child class C<br/>";
+    } } 
+    
+    $two=new B();
+echo "<b>Calling from the child class B:</b><br/>";
+$two->disp(); 
+echo "<b>Calling from the child class C:</b><br/>"; 
+$three=new C(); 
+$three->disp(); 
+?>
+
+-----------------------------------------
